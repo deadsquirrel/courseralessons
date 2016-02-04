@@ -2,8 +2,14 @@
 #result: PATIENCE YOU MUST HAVE my young padawan
 import sys
 sen = str()
+sent = str()
 inp = sys.argv[1]
-inp_sp = inp.split()
+
+for i in inp:
+    if i != "[" and i != "]" and i != "'" and i !=",":
+        sen = sen + i
+
+inp_sp = sen.split()
 for i in inp_sp:
     sen = i + " " + sen
 print sen.strip()
