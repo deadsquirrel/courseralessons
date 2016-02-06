@@ -14,12 +14,17 @@ for line in handle:
     else:
         str = line.split()
         keystr = str [5]
-#        print "KS:",keystr
         keyt = keystr[:2]
-        print "Key:",keyt
         if count.has_key(keyt) == True:
             d2 = {keyt: count[keyt] + 1}
         else:
             d2 = {keyt: 1}
-        count.update(d2)
-print count
+            count.update(d2)
+print "Count:",count
+            
+list_keys = count.keys()
+list_keys.sort()
+print "List: ",list_keys
+
+for j in list_keys:
+    print j, count[j]
