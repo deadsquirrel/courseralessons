@@ -15,13 +15,11 @@ for line in handle:
         str = line.split()
         keystr = str [5]
 #        print "KS:",keystr
-        key = keystr[:2]
-        print "Key:",key
-#        count[key] = 1
-        for i in count:
-            print "1:", i
-            if i == key:
-                count[i] = count[key] +1
-            else:
-                count[i] = 1
-print count.items()
+        keyt = keystr[:2]
+        print "Key:",keyt
+        if count.has_key(keyt) == True:
+            d2 = {keyt: count[keyt] + 1}
+        else:
+            d2 = {keyt: 1}
+        count.update(d2)
+print count
