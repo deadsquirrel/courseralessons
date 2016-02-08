@@ -44,12 +44,13 @@ for j in inp:
 print "------------"      
 print newl
 print "------------"      
-
+newstr = ''.join(newl)
+print newstr
 counter = len(newl)
 while counter > 0:
     print "N",counter 
-    word = newl[0:5]
+    word = newstr[0:5]
     print "word:",word
-    newnl = newl.replace(word, "")
-    print "shortline::",newnl
+    newstr = newstr[5:]
+    print "shortline::",newstr
     counter = counter - 5
