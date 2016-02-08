@@ -10,7 +10,7 @@ n = 0
 k = 5
 key_v = []
 newl = []
-
+s = str()
 '''
 create list of tuple with key_value_structure = key_letter_of_alphabet
 '''
@@ -21,7 +21,7 @@ for i in alphabet:
     n = n + 1
     k = k + 1
 
-#print key_v
+print key_v
 
 '''
 a.islower() .
@@ -51,6 +51,11 @@ while counter > 0:
     print "N",counter 
     word = newstr[0:5]
     print "word:",word
+    for k, v in key_v:
+        if v == word:
+            lit = k
+            s = s + lit
     newstr = newstr[5:]
     print "shortline::",newstr
     counter = counter - 5
+print s
