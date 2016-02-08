@@ -32,7 +32,8 @@ True False
 print inp
 for j in inp:
     if j == " ":
-        newl.append(j)
+#        newl.append(j)
+        continue
     else:
         low = j.islower()
         if low == True:
@@ -42,3 +43,13 @@ for j in inp:
 
 print "------------"      
 print newl
+print "------------"      
+
+counter = len(newl)
+while counter > 0:
+    print "N",counter 
+    word = newl[0:5]
+    print "word:",word
+    newnl = newl.replace(word, "")
+    print "shortline::",newnl
+    counter = counter - 5
