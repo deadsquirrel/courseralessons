@@ -18,3 +18,8 @@ for line in fh:
         for i in y:
             s += int(i)
 print 'sum = ',s
+
+
+# Optional: Just for Fun
+# import re
+# print sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] )
