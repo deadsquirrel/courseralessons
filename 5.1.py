@@ -11,8 +11,12 @@ for i in inp_list:
         out_list.append(i)
 print out_list
 for i in out_list:
-    print i
-    print "index", out_list.index(i)
+    new_list = out_list[int(i):]
+    for j in new_list:
+        if i == j:
+            new_list = out_list.remove(j) 
+
+print new_list
 '''
     if i != j:
         print i, j, "a"
