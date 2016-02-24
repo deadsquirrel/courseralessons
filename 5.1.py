@@ -1,36 +1,35 @@
 import sys
 inp_list = sys.argv[1]
 #inp_list = [9,6,6,4,4,30]
-out_list = []
+t_list = []
+w_list = []
 next_list = []
 
 print "inp:",inp_list
-print "out0:",out_list
+print "out0:",t_list
 for i in inp_list:
     if i.isdigit():
-        out_list.append(i)
-print out_list
-for i in out_list:
-    new_list = out_list[int(i):]
+        t_list.append(i)
+print t_list
+index = 0
+for i in t_list:
+    print "-----for---1------"
+    print "index: ", index 
+    print "i: ", i 
+    new_list = t_list[index+1:]
+    print "new_list:", new_list 
     for j in new_list:
-        if i == j:
-            new_list = out_list.remove(j) 
+        print "-----for---2------"
+        print "j: ", j 
+        w_list.append(j)
+        print "w_list:", w_list 
+        if j == i:
+            t_list.remove(i) 
+            print "1 j:",j,"i: ", i
+        else:
+            print "2 j:",j,"i: ", i
+    index += 1
+    print "================== "
+print "--------------"
+print "qq w_list:", w_list
 
-print new_list
-'''
-    if i != j:
-        print i, j, "a"
-    else: print "b"
-    #   next_list.append(i)
-        
-print next_list
-'''
-
-'''
-print "inp:",inp_list
-print "out0:",out_list
-for i in inp_list:
-    if i.isdigit():
-        out_list.append(i)
-print out_list
-'''
