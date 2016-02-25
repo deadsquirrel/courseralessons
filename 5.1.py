@@ -21,15 +21,15 @@ for i in t_list:
     for j in new_list:
         print "-----for---2------"
         print "j: ", j 
-        w_list.append(j)
-        print "w_list:", w_list 
+ #       w_list.append(j)
+ #       print "w_list:", w_list 
         if j == i:
-            t_list.remove(i) 
+            t_list.remove(t_list[index+1]) 
             print "1 j:",j,"i: ", i
         else:
             print "2 j:",j,"i: ", i
     index += 1
     print "================== "
 print "--------------"
-print "qq w_list:", w_list
-
+#print "qq w_list:", w_list
+print "rr t_list:", t_list
