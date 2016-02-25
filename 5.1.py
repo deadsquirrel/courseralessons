@@ -13,14 +13,16 @@ print t_list
 for c, i in enumerate(t_list):
     print "-------------------for---1------"
     print "i: ", i , "c: ", c
-    new_list = t_list[c+1:]
-    print "new_list:", new_list 
-    for count, j in enumerate(new_list):
+#    new_list = t_list[c+1:]
+#   print "new_list:", new_list 
+    for count, j in enumerate(t_list[c+1:]):
         print "-----for---2------"
         print "count: ", count, "j: ", j 
         if j == i:
             print j, " ==  ", i
-            t_list.pop(count+1)
+#           new_list.pop(count)
+            t_list.insert(c, t_list.pop(count))
+            print "t_list:", t_list
         else:
             print "j:",j,"i: ", i
 

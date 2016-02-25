@@ -7,29 +7,22 @@ but does not repeat elements.
 '''
 
 import sys
-list4 = [12,9,80,8,7]
-#inp_list = sys.argv[1]
+inp_list = sys.argv[1]
+t_list = []
+next_list = []
 
+for i in inp_list:
+    if i.isdigit():
+        t_list.append(i)
+        print t_list
 
-def cheklist (arg1, arg2):
-    for j in arg2:
-        if arg1 != j:
-            return arg2.append(arg1)
-            print "A"
+for c, i in enumerate(t_list):
+    new_list = t_list[c+1:]
+    for count, j in enumerate(new_list):
+        if j == i:
+            print j, " ==  ", i
+            t_list.insert(c, t_list.pop(count+1))
         else:
-            return arg2
-            print "B"
-        
-list = []
-for i in list4:
-    print list.append(i)
-
-    #    cheklist(i, inp_list(:i))
-    
-''' example:
-def text_prompt(msg):
-    try:
-        return raw_input(msg)
-    except NameError:
-        return raw_input(msg) 
-'''
+            print "j:",j,"i: ", i
+print "uniq number of list:", t_list
+                    
