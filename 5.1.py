@@ -2,7 +2,7 @@ import sys
 inp_list = sys.argv[1]
 #inp_list = [9,6,6,4,4,30]
 t_list = []
-w_list = []
+last_list = []
 next_list = []
 
 print "inp:",inp_list
@@ -11,25 +11,24 @@ for i in inp_list:
     if i.isdigit():
         t_list.append(i)
 print t_list
-index = 0
-for i in t_list:
-    print "-----for---1------"
-    print "index: ", index 
-    print "i: ", i 
-    new_list = t_list[index+1:]
+#index = 0
+for c, i in enumerate(t_list):
+    print "-------------------for---1------"
+ #   print "index: ", index 
+    print "i: ", i , "c: ", c
+#    new_list = t_list[index+1:]
+    new_list = t_list[c+1:]
     print "new_list:", new_list 
-    for j in new_list:
+    for count, j in enumerate(new_list):
         print "-----for---2------"
-        print "j: ", j 
- #       w_list.append(j)
- #       print "w_list:", w_list 
+        print "count: ", count, "j: ", j 
         if j == i:
-            t_list.remove(t_list[index+1]) 
-            print "1 j:",j,"i: ", i
+            print j, " ==  ", i
+            t_list.pop(count+1)
+#            last_list.append(i)
         else:
-            print "2 j:",j,"i: ", i
-    index += 1
+            print "j:",j,"i: ", i
+
     print "================== "
-print "--------------"
-#print "qq w_list:", w_list
-print "rr t_list:", t_list
+print " t_list:", t_list
+
