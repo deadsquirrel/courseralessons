@@ -6,4 +6,3 @@ def fib(n):
     for i in range(n - 2):
         a, b = b, a + b
     return b
-    
