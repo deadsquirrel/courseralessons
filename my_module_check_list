@@ -1,0 +1,14 @@
+def hi():
+    print("Hello friend!")
+
+def clean_list(inp_list):
+    for i in inp_list:
+        cheklist(i, inp_list(:i))
+        
+def checklist (arg1, arg2):
+    for j in arg2:
+        if arg1 != j:
+        return arg2.append(arg1)
+        print "A"
+        else:
+            return print arg2
