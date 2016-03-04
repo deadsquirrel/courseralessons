@@ -1,0 +1,2 @@
+def counter(a, b):
+    print (a, b)     
