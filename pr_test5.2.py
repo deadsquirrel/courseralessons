@@ -1,6 +1,6 @@
-import pr_test5_def
+import pr_test5_def 
 import sys
 
-
-pr_test5_def.counter()
+inp = sys.argv[1]
+pr_test5_def.counter(inp)
 
