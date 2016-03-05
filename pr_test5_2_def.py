@@ -1,2 +1,13 @@
-def counter(a):
-    print (a)     
+def counter(a, b):
+    print (a, b)     
+
+
+
+
+'''
+def fib(n):
+    a = b = 1
+    for i in range(n - 2):
+        a, b = b, a + b
+    return b
+'''
