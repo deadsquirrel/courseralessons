@@ -1,5 +1,6 @@
 def counter(a, b):
-    print (a, b)     
+    for i in b:
+        print (a, 'in', int(i))     
 
 
 
