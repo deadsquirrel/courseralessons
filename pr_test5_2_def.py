@@ -1,6 +1,10 @@
 def counter(a, b):
+    counter = 0
     for i in b:
-        print (a, 'in', int(i))     
+        print (a, 'in', int(i))
+        if a == int(i):
+            counter += 1
+    return counter
 
 
 
