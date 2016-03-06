@@ -8,20 +8,23 @@ from BeautifulSoup import *
 url = raw_input('Enter URL: ')
 count = int(raw_input('Enter count: '))
 pos = int(raw_input('Enter position: '))
-html = urllib.urlopen(url).read()
-soup = BeautifulSoup(html)
-
-name_list = ['A']
-N = 1
+name = None
 # Retrieve all of the anchor tags
-tags = soup('a')
-for tag in tags:
-#    print tag.get('href', None)
-#    print tag.contents[0]
-    name_list.append(tag.contents[0])
-print name_list
+
 while count > 0:
-    for name in name_list:
-        print name_list[(pos)*N]
-        count = count - 1
-        N += 1
+    name_list = []
+    html = urllib.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    tags = soup('a')
+    for tag in tags:
+        print tag.get('href', None)
+        print 'names', tag.contents[0]
+        name_list.append(tag.get('href', None))
+
+    count = count - 1
+    
+    url = name_list[pos-1]
+#    name = url.contents[0]
+    print 'count:', count, '---url---', url
+print '===', name
+   
