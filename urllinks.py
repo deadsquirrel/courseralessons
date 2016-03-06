@@ -10,8 +10,5 @@ soup = BeautifulSoup(html)
 # Each tag is like a dictionary of HTML attributes
 
 tags = soup('a')
-print tags
-'''
 for tag in tags:
     print tag.get('href', None)
-'''
