@@ -5,12 +5,14 @@ def counter(a, b):
             print (int(j), 'in', int(i))
             if int(j) == int(i):
                 counter += 1
+                print "N", counter
     return counter
 
 
 
 
 '''
+example:
 def fib(n):
     a = b = 1
     for i in range(n - 2):
