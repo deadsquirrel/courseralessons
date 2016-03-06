@@ -7,17 +7,9 @@ from BeautifulSoup import *
 
 url = raw_input('Enter - ')
 html = urllib.urlopen(url).read()
-
 soup = BeautifulSoup(html)
 
 # Retrieve all of the anchor tags
-summ = 0
-tags = soup('span')
+tags = soup('a')
 for tag in tags:
-    # Look at the parts of a tag
-#    print 'TAG:',tag
-#    print 'TD:',tag.get('td', None)
-    summ = summ + int(tag.contents[0])
-#    print 'Attrs:',tag.attrs
-
-print summ
+    print tag.get('href', None)
