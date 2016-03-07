@@ -2,10 +2,10 @@ import sys
 import short_def 
 
 
-inp = sys.argv[1]
+ina = sys.argv[1]
+inb = sys.argv[2]
 
-
-print (short_def.ter(inp))
+print (short_def.ter(ina, inb))
 
 
 

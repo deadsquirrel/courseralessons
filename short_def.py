@@ -1,13 +1,19 @@
-def ter(a):
-    for i in a:
-        b = a[:]
-            if int(j) == int(i):
-                list.append
-    return counter
+def ter(a, b):
+    list = []
+    for j in b:
+        for i in a:
+            print "i=",i, " and j=",j
+            if i == j:
+                n = a.index(i)
+                print "n=",n
+                print a
+                print 'list', list.append(i)
+                c = list.pop(n)
+            print a
+    return list
 
+    
 
-# исключающая итерация — например, вывести элементы 1-го списка, которых нет во 2-м списке:
-#
 #  for item in set(L).difference(L2)
 
 '''
@@ -17,4 +23,8 @@ def fib(n):
     for i in range(n - 2):
         a, b = b, a + b
     return b
+'''
+
+'''
+for item in set(L).difference(L2)
 '''
