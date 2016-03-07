@@ -1,16 +1,18 @@
 def ter(a, b):
-    list = []
+    list_a = []
     for j in b:
         for i in a:
             print "i=",i, " and j=",j
+            list_a.append(i)
             if i == j:
                 n = a.index(i)
                 print "n=",n
                 print a
-                print 'list', list.append(i)
-                c = list.pop(n)
+#                list_a.append(i)
+                print 'list', list_a
+                list_a.pop(n)
             print a
-    return list
+    return list_a
 
     
 
