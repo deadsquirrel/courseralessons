@@ -1,11 +1,11 @@
 import sys
-import pr_test5.1_v3_def 
+import pr_test5_1_v3_def
 
 
 in_a = sys.argv[1]
 in_b = sys.argv[2]
 
-print (pr_test5.1_v3_def.counter(in_a, in_b))
+print (pr_test5_1_v3_def.counter(in_a, in_b))
 
 
 
