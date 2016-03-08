@@ -5,6 +5,5 @@ def counter (a, b):
         list_a.append(item)
 #        print a
 #        print b
-#    print "!",list_a
-#    for i in set(b).difference(list_a)
-    return list_a
+    print "!",list_a
+    return len(b) - len(list_a)
