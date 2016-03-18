@@ -18,3 +18,10 @@ for item in info:
     print 'Attribute', item['x']
 
 
+# User count: 2
+# Name Chuck
+# Id 001
+# Attribute 2
+# Name Chuck
+# Id 009
+# Attribute 7
