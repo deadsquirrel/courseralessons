@@ -11,8 +11,23 @@ import json
 
 url = raw_input('Enter location: ')
 print 'Retrieving', url
-uh = urllib.urlopen(url)
-data = uh.read()
 
-info = json.loads(str(data))
-print info
+uh = urllib.urlopen(url)
+print uh
+
+data = uh.read()
+print 'Retrieved',len(data),'characters'
+print "----------------"
+print data
+info = json.loads(data)
+#print info
+
+sum = 0
+
+#print 'mm',  info[0]
+
+'''
+for item in info:
+    print item
+    sum = sum + 1
+'''
