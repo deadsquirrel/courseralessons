@@ -23,16 +23,16 @@ info = json.loads(data)
 #print info
 
 sum = 0
-print json.dumps(info, indent=4)
+#print json.dumps(info, indent=4)
 
-print 'mm',  info["comments"][0]
+#print 'mm',  info["comments"][0]
 #["count"]
 
 
 
 for item in info["comments"]:
 #    print item
-    print item["count"]
+#    print item["count"]
     sum = sum + item["count"]
 
 print sum
