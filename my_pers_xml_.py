@@ -12,13 +12,14 @@ data = open ('1645_1.csv')
 data2 = open('1645_2_1.csv')
 for line in data:
     if re.search('[a-zA-Z\._-]+@[a-z\.]+', line):
-        print line
+#        print line
         p = re.compile('[a-zA-Z\._-]+@[a-z\.]+')
 #        print '___',p
         n = p.findall(line)
         print '--',n
-        my_check.check_l(data2)
-        print '____'
+        for i in data2:
+            my_check.check_l(data2)
+            print '____'
 # call module find email in new_list
 
 
