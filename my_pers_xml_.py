@@ -6,25 +6,20 @@ check name of the registered people of list_1 in
 
 '''
 import re
+import my_check
 
 data = open ('1645_1.csv')
-l = []
+data2 = open('1645_2_1.csv')
 for line in data:
     if re.search('[a-zA-Z\._-]+@[a-z\.]+', line):
         print line
-        
         p = re.compile('[a-zA-Z\._-]+@[a-z\.]+')
+#        print '___',p
         n = p.findall(line)
         print '--',n
-        
-'''
-    at_pos = line.find('@')
-    print at_pos
-    next_pos = line.find(",", at_pos)
-    print next_pos
-'''
+        my_check.check_l(data2)
+        print '____'
 # call module find email in new_list
-
 
 
 
