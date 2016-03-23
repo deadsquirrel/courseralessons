@@ -15,20 +15,25 @@ print '------------------'
 print list_gr
 print '------------------'
 
-'''
+out_list = []
 data2 = open('1645_2_1.csv')
-for line in data:
-    if re.search('[a-zA-Z\._-]+@[a-z\.]+', line):
+for line in data2:
+    if re.search('[a-zA-Z0-9\._-]+@[a-z\.]+', line):
 #        print line
-        p = re.compile('[a-zA-Z\._-]+@[a-z\.]+')
+        p = re.compile('[a-zA-Z0-9\._-]+@[a-z\.]+')
 #        print '___',p
         n = p.findall(line)
         print '--',n
-        for i in data2:
-            my_check.check_l(data2)
-            print '____'
-# call module find email in new_list
-'''
+        for i in list_gr:
+            print "i:", i
+            if i == n[0][:]:
+                print "Ok"
+                out_list.append(i)
+#            else: print "No"
+        print '____'
+print out_list
+print 'the end'
+
 
 
 
