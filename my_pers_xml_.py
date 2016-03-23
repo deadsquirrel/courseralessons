@@ -8,10 +8,15 @@ check name of the registered people of list_1 in
 import re
 
 data = open ('1645_1.csv')
+l = []
 for line in data:
-    n = re.search('[a-zA-Z._-]+@[a-zA-Z._-]+', line)
-#    m = n.span()
-    print n
+    if re.search('[a-zA-Z\._-]+@[a-z\.]+', line):
+        print line
+        
+        p = re.compile('[a-zA-Z\._-]+@[a-z\.]+')
+        n = p.findall(line)
+        print '--',n
+        
 '''
     at_pos = line.find('@')
     print at_pos
