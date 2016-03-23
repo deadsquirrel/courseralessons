@@ -9,6 +9,13 @@ import re
 import my_check
 
 data = open ('1645_1.csv')
+#create list from spisok groups
+list_gr = my_check.check_l(data)
+print '------------------'
+print list_gr
+print '------------------'
+
+'''
 data2 = open('1645_2_1.csv')
 for line in data:
     if re.search('[a-zA-Z\._-]+@[a-z\.]+', line):
@@ -21,12 +28,7 @@ for line in data:
             my_check.check_l(data2)
             print '____'
 # call module find email in new_list
-
-
-
-
-
-
+'''
 
 
 
