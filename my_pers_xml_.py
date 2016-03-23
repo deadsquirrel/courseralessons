@@ -5,7 +5,30 @@ check name of the registered people of list_1 in
  list_0 - list of a students of Capital English
 
 '''
+import re
 
+data = open ('1645_1.csv')
+for line in data:
+    print line
+    at_pos = line.find('@')
+    print at_pos
+    next_pos = line.find(",", at_pos)
+    print next_pos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 import urllib
 import json
 
@@ -37,4 +60,4 @@ for item in info["head"]:
 
 
 
-
+'''
