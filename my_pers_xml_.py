@@ -9,12 +9,16 @@ import re
 
 data = open ('1645_1.csv')
 for line in data:
-    print line
+    n = re.search('[a-zA-Z._-]+@[a-zA-Z._-]+', line)
+#    m = n.span()
+    print n
+'''
     at_pos = line.find('@')
     print at_pos
     next_pos = line.find(",", at_pos)
     print next_pos
-
+'''
+# call module find email in new_list
 
 
 
