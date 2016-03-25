@@ -7,6 +7,7 @@ check name of the registered people of list_1 in
 '''
 import re
 import my_check
+f = open('out_file.csv', 'w')
 
 data = open ('1645_1.csv')
 #create list from spisok groups
@@ -31,6 +32,7 @@ for line in data2:
                 print "Ok"
                 out_list.append(i)
                 out_list2.append(line)
+                f.write(line + '\n')
 #            else: print "No"
         print '____'
 print out_list
