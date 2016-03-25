@@ -9,7 +9,7 @@ import re
 import my_check
 f = open('out_file.csv', 'w')
 
-data = open ('1645_1.csv')
+data = open ('all_list.csv')
 #create list from spisok groups
 list_gr = my_check.check_l(data)
 print '------------------'
@@ -18,7 +18,7 @@ print '------------------'
 
 out_list = []
 out_list2 = []
-data2 = open('1645_2_1.csv')
+data2 = open('reg_list.csv')
 for line in data2:
     if re.search('[a-zA-Z0-9\._-]+@[a-z\.]+', line):
 #        print "LINE:", line
