@@ -16,10 +16,11 @@ print list_gr
 print '------------------'
 
 out_list = []
+out_list2 = []
 data2 = open('1645_2_1.csv')
 for line in data2:
     if re.search('[a-zA-Z0-9\._-]+@[a-z\.]+', line):
-#        print line
+        print "LINE:", line
         p = re.compile('[a-zA-Z0-9\._-]+@[a-z\.]+')
 #        print '___',p
         n = p.findall(line)
@@ -29,9 +30,11 @@ for line in data2:
             if i == n[0][:]:
                 print "Ok"
                 out_list.append(i)
+                out_list2.append(line)
 #            else: print "No"
         print '____'
 print out_list
+print out_list2
 print 'the end'
 
 
