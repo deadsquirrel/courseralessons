@@ -1,11 +1,13 @@
 from Tkinter import *
 
+def printer(event):
+    print ("AND AGAIN 'Hello world!'")
+
 root = Tk()
 but = Button(root)
-but["text"] = "Печать"
+but["text"] = "PRINTING"
+#but = Button(root, text="PRINTING")
 
-def printer(event):
-    print ("Как всегда очередной 'Hello world!'")
 
 # click left button of mouse - <Button-1>
 # relations (binding) events and function
