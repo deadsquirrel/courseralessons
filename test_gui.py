@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Tkinter import *
 
 def printer(event):
@@ -5,7 +6,7 @@ def printer(event):
 
 root = Tk()
 but = Button(root)
-but["text"] = "PRINTING"
+but["text"] = "Печать"
 #but = Button(root, text="PRINTING")
 
 
