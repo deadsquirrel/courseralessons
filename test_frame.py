@@ -5,7 +5,7 @@ root = Tk()
 fra1 = Frame(root,width=500,height=100,bg="darkred")
 fra8 = Frame(root,width=500,height=50,bg="red")
 fra2 = Frame(root,width=200,height=20,bg="green",bd=20)
-fra3 = Frame(root,width=500,height=50,bg="darkblue")
+fra3 = Frame(root,width=6500,height=150,bg="darkblue", bd = 30)
 fra4 = Frame(root,width=187,height=50,bg="blue")
 fra7 = Frame(root,width=450,height=50,bg="lightblue")
 fra5 = Frame(root,width=200,height=100,bg="yellow")
@@ -40,4 +40,12 @@ fra16.pack()
 fra17.pack()
 fra187.pack()
 fra1897.pack()
+
+
+
+ent1 = Entry(fra2,width=20)
+ent1.pack()
+ent2 = Entry(fra3,width=30)
+ent2.pack()
+
 root.mainloop() 
