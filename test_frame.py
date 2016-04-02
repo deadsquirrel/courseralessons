@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Tkinter import *
  
 root = Tk()
@@ -21,6 +22,25 @@ fra16 = Frame(root,width=375,height=37,bg="violet")
 fra17 = Frame(root,width=375,height=37,bg="pink")
 fra187 = Frame(root,width=375,height=37,bg="purple")
 fra1897 = Frame(root,width=375,height=90,bg="red")
+
+
+ent1 = Entry(fra2,width=20)
+ent2 = Entry(fra3,width=30)
+
+#Свойства:
+#    orient определяет направление шкалы;
+#    length – длина шкалы в пикселях;
+#    from_ и to – с какого значения шкала начинается и каким заканчивается
+# (т. е. диапазон значений);
+#    tickinterval – интервал, через который отображаются метки для шкалы;
+#    resolution - минимальная длина отрезка, на которую пользователь может
+# передвинуть движок.
+sca1 = Scale(fra3,orient=HORIZONTAL,length=300,
+          from_=0,to=100,tickinterval=10,resolution=5)
+sca2 = Scale(fra7,orient=VERTICAL,length=400,
+          from_=1,to=2,tickinterval=0.1,resolution=0.1) 
+
+
 fra1.pack()
 fra8.pack()
 fra2.pack()
@@ -41,11 +61,9 @@ fra17.pack()
 fra187.pack()
 fra1897.pack()
 
-
-
-ent1 = Entry(fra2,width=20)
 ent1.pack()
-ent2 = Entry(fra3,width=30)
 ent2.pack()
+sca1.pack()
+sca2.pack()
 
-root.mainloop() 
+root.mainloop()
