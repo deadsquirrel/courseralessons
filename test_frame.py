@@ -37,8 +37,10 @@ ent2 = Entry(fra3,width=30)
 # передвинуть движок.
 sca1 = Scale(fra3,orient=HORIZONTAL,length=300,
           from_=0,to=100,tickinterval=10,resolution=5)
-sca2 = Scale(fra7,orient=VERTICAL,length=400,
+sca2 = Scale(fra7,orient=VERTICAL,length=100,
           from_=1,to=2,tickinterval=0.1,resolution=0.1) 
+sca3 = Scale(root,orient=VERTICAL,length=800,
+          from_=1,to=10,tickinterval=1,resolution=0.1) 
 
 
 fra1.pack()
@@ -65,5 +67,6 @@ ent1.pack()
 ent2.pack()
 sca1.pack()
 sca2.pack()
+sca3.pack()
 
 root.mainloop()
