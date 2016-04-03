@@ -34,7 +34,7 @@ for line in fh:
     conn.commit()
 
 # https://www.sqlite.org/lang_select.html
-sqlstr = 'SELECT hostname, count FROM Counts ORDER BY count DESC LIMIT 10'
+sqlstr = 'SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'
 
 print
 print "Counts:"
