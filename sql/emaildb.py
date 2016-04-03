@@ -7,7 +7,7 @@ cur.execute('''
 DROP TABLE IF EXISTS Counts''')
 
 cur.execute('''
-CREATE TABLE Counts (hostname TEXT, count INTEGER)''')
+CREATE TABLE Counts (org TEXT, count INTEGER)''')
 
 fname = raw_input('Enter file name: ')
 if ( len(fname) < 1 ) : fname = 'mbox-short.txt'
@@ -16,18 +16,18 @@ for line in fh:
     if not line.startswith('From: ') : continue
     pieces = line.split()
     email = pieces[1]
-    print email
-    hostname1 = email.split('@')
-    hostname = hostname1[1]
-    print hostname
-    cur.execute('SELECT count FROM Counts WHERE hostname = ? ', (hostname, ))
+#    print email
+    hostname = email.split('@')
+    org = hostname[1]
+    print org
+    cur.execute('SELECT count FROM Counts WHERE org = ? ', (org, ))
     row = cur.fetchone()
     if row is None:
-        cur.execute('''INSERT INTO Counts (hostname, count) 
-                VALUES ( ?, 1 )''', ( hostname, ) )
+        cur.execute('''INSERT INTO Counts (org, count) 
+        VALUES ( ?, 1 )''', ( org, ) )
     else : 
-        cur.execute('UPDATE Counts SET count=count+1 WHERE hostname = ?', 
-            (hostname, ))
+        cur.execute('UPDATE Counts SET count=count+1 WHERE org = ?', 
+                    (org, ))
     # This statement commits outstanding changes to disk each 
     # time through the loop - the program can be made faster 
     # by moving the commit so it runs only after the loop completes
