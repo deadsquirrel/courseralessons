@@ -14,9 +14,19 @@ sca1 = Scale(fra1,orient=HORIZONTAL,length=300,
 
 ent1 = Entry(fra2,width=10)
 
+tx = Text(root,width=40,height=30,font='14')
+scr = Scrollbar(root,command=tx.yview)
+tx.configure(yscrollcommand=scr.set)
+ 
+
+
 fra1.pack()
 sca1.pack()
 fra2.pack()
 ent1.pack()
-#sca2.pack()
+
+tx.grid(row=0,column=0)
+scr.grid(row=0,column=1)
+
+
 root.mainloop() 
