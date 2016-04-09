@@ -4,3 +4,6 @@
 *.xls
 *.sqlite
 *.sqlite3
+*.db
+*.xml
+database*
