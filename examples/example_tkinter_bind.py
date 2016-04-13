@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def output(event):
      s = ent.get()
      if s == "1":
