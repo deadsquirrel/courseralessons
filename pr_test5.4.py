@@ -1,4 +1,6 @@
 # file_search(folder, filename),
+# python pr_test5.4.py "['d', 'f', 'fggh', 'tgdfg']" "gg"
+#                      path                          name
 
 import sys
 import pr_test5_4_mod
