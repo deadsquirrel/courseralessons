@@ -2,19 +2,23 @@
 # file_search(folder, filename),
 
 def file_search(path, name):
-    res = path[0]
-    print res
-'''
-for i in path[1:]:
-    if i == name:
-        res = res + 'name'
-        return res
-    else:
-        print False
-        return False
+    res = 0
+    print 'res=', res
 
-'''
-print 'the end'
+    for i in path:
+        print 'i|', i
+        if i == name:
+            res = res + 'name'
+            return res
+        else:
+            continue
+        
+        if res == 0:            
+            return False
+        else:
+            return res
+          
+        print 'the end'
 
         
     
