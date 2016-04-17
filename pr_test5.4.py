@@ -1,12 +1,14 @@
 # file_search(folder, filename),
 # python pr_test5.4.py "['d', 'f', 'fggh', 'tgdfg']" "gg"
 #                      path                          name
+# -*- coding: utf-8 -*-
 
 import sys
 import pr_test5_4_mod
 path = sys.argv[1]
-print "::", path
+print "path::", path
 path_cut = path[2:-2]
+# вложенные папки имеют другую структуру и разделители
 path_list = path_cut.split("', '")
 
 name = sys.argv[2]
