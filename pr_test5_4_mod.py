@@ -7,12 +7,20 @@ def file_search(path_list, name):
     res = path_list[0]
     print 'res=', res
 
+#>>> isinstance(a, list)
+#True
+
+    
     for i in path_list:
         print 'i|', i
+        print type(i)
         # check is_list
-        if  i[0] == "[":
+        if i[0] == "[":
             print "Yaaaa"
-        else:
+        elif i[0] == "'":
+            print "Ooooo"
+        else: print "jjj"    
+        '''
             if i == name:
                 res = res + '/' + name
                 print 'yes', res
@@ -20,14 +28,5 @@ def file_search(path_list, name):
             else:
                 print 'no', res
                 continue
-'''        
-            if res == 0:
-                print 'the end false'
-                return False
-            else:
-                print 'the another end'
-                return res
-    
-'''
-        
+        '''
     

@@ -8,8 +8,8 @@ import pr_test5_4_mod
 path = sys.argv[1]
 print "path::", path
 path_cut = path[2:-2]
-# вложенные папки имеют другую структуру и разделители
-path_list = path_cut.split("', '")
+# subdir nas another structure
+path_list = path_cut.split(", ")
 
 name = sys.argv[2]
 print "name = ", name
