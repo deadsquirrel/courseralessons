@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 ''' 
 create fun clean_list(list_to_clean
 that takes one argument - list any values (strings, integer and real numbers)
