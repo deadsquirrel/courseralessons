@@ -111,7 +111,7 @@ myData = [
 [27.6169691,-99.4631289, 'Simon Bolivar Blvd, Laredo, TX 78045, USA'],
 [39.174335,-86.505469, 'Hilltop Garden and Nature Center at Indiana University, 2367 E 10th St, Bloomington, IN 47408, USA'],
 [18.9331831,72.8341894, 'KP Shethi Building, Janmabhoomi Marg, Kala Ghoda, Fort, Mumbai, Maharashtra 400001, India'],
-[42.3077541,-83.0182189, 'Ottawa St, Windsor, ON, Canada'],
+[42.3077541,-83.0182189, 'Ottawa St, Windsor, Canada'],
 [28.3580163,75.5887989, 'BITS, Pilani, Rajasthan 333031, India'],
 [35.8278379,-78.6593111, 'Transylvania Ave, Raleigh, NC 27609, USA'],
 [25.25968,82.989115, 'IIT Gymkhana, RR 11, Banaras Hindu University Campus, Varanasi, Uttar Pradesh 221001, India'],
