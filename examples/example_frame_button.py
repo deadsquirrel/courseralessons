@@ -10,7 +10,7 @@ from Tkinter import *
 root = Tk()
  
 fra = Frame(root,width=100,height=100)
-but = Button(root,text="Выход")
+but = Button(root,text="EXIT")
  
 fra.pack()
 but.pack()
