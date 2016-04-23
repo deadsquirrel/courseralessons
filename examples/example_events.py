@@ -1,8 +1,8 @@
-# !/usr/bin/python
+# !/usr/bin/env/python
+# -*- coding: utf-8 -*-
 # example
 # mouse events
 # keyboard events
-# -*- coding: utf-8 -*-
 
 
 from Tkinter import *
@@ -32,7 +32,14 @@ root.bind('<Motion>',move)
  
 
 
-# keyboard events 
+# keyboard events
+'''
+* <Return> - нажатие клавиши Enter;
+* <space>- пробел;
+* etc
+Сочетания клавиш пишутся через тире. Например:
+* <Control-Shift> - одновременное нажатие клавиш Ctrl и Shift.
+'''
 ent = Entry(root, width = 40)
 lbl = Label(root, width = 80)
  
