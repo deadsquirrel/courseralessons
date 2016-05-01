@@ -16,4 +16,9 @@ m.add_cascade(label="Help",menu=hm)
 hm.add_command(label="Help")
 hm.add_command(label="About")
  
+nfm = Menu(fm)
+fm.add_cascade(label="Import",menu=nfm)
+nfm.add_command(label="Image")
+nfm.add_command(label="Text")
+
 root.mainloop() 
