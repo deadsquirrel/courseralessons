@@ -1,7 +1,7 @@
 # !/usr/bin/env/python
 # -*- coding: utf-8 -*-
 # example
-# startwith, find, join
+# startwith, find, join, delimiter
 # coding ru
 
 
