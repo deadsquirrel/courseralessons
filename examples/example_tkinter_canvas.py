@@ -1,7 +1,18 @@
 # -*- coding: utf-8 -*-
  
 from Tkinter import *
+
+class But_print:
+     def __init__(self):
+          self.but = Button(root)
+          self.but["text"] = "ппц"
+          self.but.bind("<Button-1>",self.printer)
+          self.but.pack()
+     def printer(self,event):
+          print ("УРА!'")
+          
 root = Tk()
+#obj = But_print()
 
 canv = Canvas(root,width=500,height=500,bg="lightblue",
           cursor="pencil")
@@ -24,4 +35,5 @@ canv.create_polygon([300,80],[400,80],[450,75],[450,200],
 canv.create_oval([20,200],[150,300],fill="gray50")
 
 canv.pack()
+obj = But_print()
 root.mainloop() 
