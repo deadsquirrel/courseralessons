@@ -33,3 +33,12 @@ AS
 select DISTINCT b.* , a.photo AS inPHOTO, a.vgh AS inVGH
 from Res b, BET a
 WHERE a.id = b.GoodId;
+
+# rm spaces
+update Resu set GoodName = RTRIM (LTRIM(GoodName));
+
+# rm /n
+update Resu set GoodName = REPLACE(REPLACE(GoodName, CHAR(10), ' '), CHAR(13), ' ');
+
+# write into the file
+SELECT * INTO OUTFILE '/tmp/result4.csv' FIELDS TERMINATED BY '|' LINES TERMINATED BY '\n' FROM Resu;
